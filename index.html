@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santona Academy — Small-Group Mathematics Tutoring</title>
+    <meta name="description" content="Santona Academy teaches mathematics live, in batches of five — from school foundations to competitive and olympiad-level problem solving, for students around the world.">
+
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIyIiBmaWxsPSIjMzY0YTgzIi8+PHRleHQgeD0iNTAiIHk9IjU1IiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsU2Vnb2UgVUksUm9ib3RvLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjYwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+UzwvdGV4dD48L3N2Zz4K">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Santona Academy">
+    <meta property="og:url" content="https://santonaacademy.com">
+    <meta property="og:title" content="Santona Academy — Small-Group Mathematics Tutoring">
+    <meta property="og:description" content="Mathematics taught live, in batches of five — from school foundations to competitive and olympiad-level problem solving.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Santona Academy — Small-Group Mathematics Tutoring">
+    <meta name="twitter:description" content="Mathematics taught live, in batches of five — from school foundations to competitive and olympiad-level problem solving.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Santona Academy",
+      "url": "https://santonaacademy.com",
+      "description": "Santona Academy teaches mathematics live, in small batches of five — from school foundations to competitive and olympiad-level problem solving, for students around the world.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Ritsol Labs",
+        "url": "https://ritsollabs.com"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-light: #f2f4fb;
+            --bg-card: #ffffff;
+            --bg-card-hover: #fafbff;
+            --text-primary: #242836;
+            --text-secondary: #545d70;
+            --text-muted: #8a91a2;
+            --slate: #364a83;
+            --slate-deep: #2b3a63;
+            --slate-soft: #e9eef8;
+            --slate-tint: #e3e9f6;
+            --border-subtle: #e2e7f1;
+            --shadow-soft: 0 6px 22px rgba(54, 74, 131, 0.06);
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-light);
+            background-image: radial-gradient(120% 60% at 50% -10%, #e6ecf9 0%, var(--bg-light) 60%);
+            background-repeat: no-repeat;
+            color: var(--text-primary);
+            line-height: 1.48;
+            font-weight: 400;
+            letter-spacing: -.021em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            background: rgba(242, 244, 251, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 9999;
+        }
+
+        .nav-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 22px;
+        }
+
+        .nav-logo {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .nav-links { display: flex; gap: 24px; }
+
+        .nav-links a {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: var(--slate); }
+
+        section[id] { scroll-margin-top: 72px; }
+
+        .hero {
+            padding: 150px 22px 40px 22px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 58px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.06;
+            color: var(--text-primary);
+            margin-bottom: 22px;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto;
+            letter-spacing: -0.01em;
+            line-height: 1.5;
+        }
+
+        .hero-rule {
+            width: 54px;
+            height: 3px;
+            border-radius: 2px;
+            background: var(--slate);
+            margin: 32px auto 0;
+        }
+
+        .section {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 40px 22px;
+        }
+
+        .section-eyebrow {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--slate);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 26px;
+        }
+
+        /* Batch of Five — the slate feature moment */
+        .model-panel {
+            background: linear-gradient(150deg, #3d5493 0%, #2f4079 100%);
+            border-radius: 26px;
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 34px rgba(43, 58, 99, 0.18);
+        }
+
+        .model-stat { flex-shrink: 0; }
+
+        .stat-num {
+            font-size: 76px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #c3cde8;
+            letter-spacing: 0.01em;
+        }
+
+        .model-luxury {
+            font-size: 22px;
+            font-weight: 500;
+            color: #eef1fa;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            border-left: 2px solid rgba(255,255,255,0.25);
+            padding-left: 28px;
+            max-width: 460px;
+        }
+
+        .model-body { margin-top: 30px; max-width: 760px; }
+
+        .model-body p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.62;
+            margin-bottom: 16px;
+        }
+
+        .model-note {
+            font-size: 14.5px !important;
+            color: var(--text-muted) !important;
+            padding-top: 6px;
+        }
+
+        /* What students get */
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 28px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .card:hover {
+            background-color: var(--bg-card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(54, 74, 131, 0.10);
+        }
+
+        .card-title {
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .card-desc {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.58;
+        }
+
+        /* Our story — soft slate panel */
+        .story-panel {
+            background-color: var(--slate-soft);
+            border: 1px solid var(--border-subtle);
+            border-radius: 26px;
+            padding: 48px;
+        }
+
+        .story-panel p {
+            font-size: 16.5px;
+            color: var(--text-secondary);
+            line-height: 1.66;
+            margin-bottom: 16px;
+            max-width: 720px;
+        }
+
+        .story-solace {
+            font-size: 21px !important;
+            font-weight: 500;
+            color: var(--slate) !important;
+            letter-spacing: -0.01em;
+            margin: 22px 0 !important;
+        }
+
+        .story-panel strong { color: var(--text-primary); font-weight: 600; }
+
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 22px;
+            margin-top: 40px;
+        }
+
+        .footer-inner { max-width: 1024px; margin: 0 auto; }
+
+        .footer-sister {
+            font-size: 13px;
+            color: var(--text-muted);
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .footer-sister a { color: var(--text-secondary); text-decoration: none; }
+        .footer-sister a:hover { text-decoration: underline; }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-text { font-size: 12px; color: var(--text-muted); }
+        .footer-contact { font-size: 13px; color: var(--text-secondary); }
+        .footer-contact a { color: var(--slate); text-decoration: none; }
+        .footer-contact a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero { padding-top: 120px; }
+            .hero-title { font-size: 40px; }
+            .hero-subtitle { font-size: 18px; }
+            .section-title { font-size: 26px; }
+            .model-panel { padding: 32px; gap: 24px; }
+            .stat-num { font-size: 60px; }
+            .model-luxury { font-size: 19px; border-left: none; padding-left: 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); }
+            .outcomes-grid { grid-template-columns: 1fr; gap: 16px; }
+            .story-panel { padding: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Santona Academy</a>
+            <div class="nav-links">
+                <a href="#model">Our classes</a>
+                <a href="#outcomes">What students get</a>
+                <a href="#story">Our story</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">Santona Academy</h1>
+        <p class="hero-subtitle">
+            Mathematics taught live, in small batches of five — from school foundations to competitive and olympiad-level problem solving, for students around the world.
+        </p>
+        <div class="hero-rule"></div>
+    </section>
+
+    <section class="section" id="model">
+        <p class="section-eyebrow">Our classes</p>
+        <h2 class="section-title">The Batch of Five</h2>
+        <div class="model-panel">
+            <div class="model-stat">
+                <div class="stat-num">1 : 5</div>
+                <span class="stat-label">teacher to students, every class</span>
+            </div>
+            <p class="model-luxury">A one-to-five ratio is a genuine luxury — one most coaching simply can't offer.</p>
+        </div>
+        <div class="model-body">
+            <p>True mentorship can't happen in a crowded room. We cap every batch at five students, which we've found is the balance point: each child gets real individual attention, while still learning alongside peers. When the group meets a common challenge, we work through it together; when one student is stuck on a concept, we pivot and give them the focused attention to master it.</p>
+            <p class="model-note">We build our own curriculum and practice tests, using AI to help create them — with a human reviewing and correcting every step.</p>
+        </div>
+    </section>
+
+    <section class="section" id="outcomes">
+        <p class="section-eyebrow">What students get</p>
+        <h2 class="section-title">More than answers</h2>
+        <div class="outcomes-grid">
+            <div class="card">
+                <h3 class="card-title">Progress you can see</h3>
+                <p class="card-desc">We follow each student's journey closely and give parents deep, honest, actionable insight into how their child is really doing.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Beyond one test</h3>
+                <p class="card-desc">Rather than drilling for a single exam, our curriculum prepares students across a broad range of the most respected competitive math exams.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Confidence that carries</h3>
+                <p class="card-desc">Success in competition builds real confidence — the spark that helps a child grow into the best version of themselves.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">A foundation for everything</h3>
+                <p class="card-desc">A strong footing in math isn't only for future engineers. It trains the mind to think in structure — which feeds creativity in music, art, and far beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="story">
+        <p class="section-eyebrow">Our story</p>
+        <h2 class="section-title">Why Santona</h2>
+        <div class="story-panel">
+            <p>Santona Academy grew from a lifelong love of mathematics — the belief that math isn't just a subject to get through, but something closer to magic: logic, structure, and a language worth cherishing. Too many children learn to fear it far too early, long before they ever meet its joy. We started Santona to turn that fear into fascination.</p>
+            <p>The academy is named after <strong>Santona</strong> — our founder's late mother, and a lifelong educator.</p>
+            <p class="story-solace">Santona means solace: calm, and a gentle space to grow.</p>
+            <p>That is the spirit we try to teach in — patient, personal, and unafraid. It is, quite simply, our way of giving something back.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-sister">Santona Academy is a division of Ritsol Labs · <a href="https://ritsollabs.com">ritsollabs.com</a></p>
+            <div class="footer-container">
+                <p class="footer-text">&copy; 2026 Santona Academy</p>
+                <p class="footer-contact">Contact: <a href="mailto:contact@santonaacademy.com">contact@santonaacademy.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
